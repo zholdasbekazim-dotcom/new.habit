@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+}
+
+.auth-box {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 25px;
+  width: 300px;
+  margin: 100px auto;
+}
+
+input, button {
+  padding: 12px;
+  margin: 10px;
+  border-radius: 15px;
+  border: none;
+  font-size: 14px;
+}
+
+button {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.habit {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 20px;
+  margin: 10px auto;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.habit.done {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.goal-box {
+  width: 400px;
+  margin: 20px auto;
+}
+
+.goal-progress {
+  width: 100%;
+  height: 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+}
+
+.goal-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.achievement {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  padding: 15px 30px;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+.achievement.show {
+  bottom: 40px;
+}
+
+.dark {
+  background: linear-gradient(135deg, #000000, #434343);
+}              
+
+
+
+
+
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .habit {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  .goal-box, .progress-container {
+    width: 95%;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+.section-box {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px auto;
+  width: 400px;
+}
+
+#timerDisplay {
+  font-size: 36px;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.section-box button {
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.section-box button:hover {
+  transform: scale(1.05);
+}

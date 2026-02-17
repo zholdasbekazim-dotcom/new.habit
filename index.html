@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Habit App</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- AUTH SECTION -->
+<div id="authSection" class="auth-box">
+  <h2 id="authTitle">Login</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="handleAuth()">Login</button>
+  <p onclick="toggleAuth()" class="switch">No account? Register</p>
+</div>
+
+<!-- APP SECTION -->
+<div id="appSection" style="display:none;">
+
+  <div class="topbar">
+    <h1>Habit Tracker</h1>
+    <div>
+      <button onclick="showSection('dashboard')">🏠</button>
+      <button onclick="showSection('analytics')">📊</button>
+      <button onclick="showSection('settings')">⚙️</button>
+      <button onclick="logout()">🚪</button>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboardSection">
+<div id="pomodoroSection" class="section-box">
+  <h3>Pomodoro Timer</h3>
+  <div id="timerDisplay">25:00</div>
+  <button onclick="Pomodoro.start()">Start</button>
+  <button onclick="Pomodoro.reset()">Reset</button>
+</div>
+
+    <div class="goal-box">
+      <h3>Daily Goal</h3>
+      <div class="goal-progress">
+        <div id="goalBar" class="goal-fill"></div>
+      </div>
+      <p id="goalText">0 / 0 completed</p>
+    </div>
+
+    <input type="text" id="habitInput" placeholder="New habit">
+    <button onclick="addHabit()">Add</button>
+
+    <div id="habitList"></div>
+
+    <div id="achievementPopup" class="achievement">
+      🔥 7 Day Streak! Keep Going!
+    </div>
+
+  </div>
+
+  <!-- ANALYTICS -->
+  <div id="analyticsSection" style="display:none;">
+    <h2>Analytics</h2>
+    <div id="chart"></div>
+  </div>
+
+  <!-- SETTINGS -->
+  <div id="settingsSection" style="display:none;">
+    <h2>Settings</h2>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
